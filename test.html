@@ -1,0 +1,221 @@
+<head>
+    <title>Formulaire d inscription.html</title>
+    <link rel="stylesheet"  href="style2.css" />
+    <script src="code.js"></script>
+    <style>
+        body{
+           
+            padding-left: 20px;
+           
+    background: white repeat-y  right url(img/logo1.png) ;
+        }
+       form{
+           border:1px solid black;
+           box-shadow: 0px 10px 20px 0px rgb(7, 6, 6);
+           max-width: 80%;
+       }
+        .h1{
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            text-decoration: underline double yellow;
+            color: white;
+                 background-color: cadetblue ;
+            padding: 10px;
+            width: 80%;
+            border-style: outset ;
+            border-width: 5px;
+            border-color: crimson yellow green blue;
+            border-radius: 30px 0px;
+            outline-width: 2px;
+            outline-style: dotted;
+            position: sticky;
+            left:150px;
+            top: 100px;  
+            z-index: -1;
+        }
+        input[type="button"],input[type="reset"]
+        {
+            text-align: center;
+
+            max-width: 80px;
+            padding: 15px;
+            background-color: rgb(136, 136, 228);
+            border-radius: 10px;
+            border: none;
+        }
+        #btnV:hover{
+            background-color: green;
+        }
+        #tdtop{
+            vertical-align: top;
+        }
+        ul {
+  list-style-image: url('img/favicon.ico');
+}
+#exp{
+    position: fixed;
+   bottom:0px;
+    left: 0px;
+width: 50%;
+box-shadow:0px 10px 20px 0px black ;
+background-color: white;
+z-index: 1;
+}
+.hh{
+    display: none;
+}
+
+li{float: right;
+ display: inline;
+padding: 10px;
+background-color: olivedrab;
+list-style-type: none;
+color:white;
+font-weight: bold;
+}
+li:hover{background-color: rgb(255, 233, 37);
+    color:rgb(0, 0, 0);
+}
+#fixx{position:fixed;
+right:0px;
+top:0px;}
+li a{
+    text-decoration: none;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <a href="http:\\NTICRABAT.COM" >DEV</a>
+    <div id="fixx">
+  <ul>
+      <li><a href="http:\\NTICRABAT.COM" >DEV</a></li>
+      <li>ID</li>
+      <li>TSGE</li>
+      <li>TCE</li>
+  </ul>
+</div>
+  <div id="exp">
+      <div style="float: right;">
+        <input  id="BR" type="button" value="_" 
+        onclick="document.getElementById('exp').className='rr';">
+    <input  id="BG" type="button" value="&#9633;" 
+      onclick="document.getElementById('exp').className='gg';"> 
+      <input  id="BF" type="button" value="x" 
+      onclick="document.getElementById('exp').className='hh';">
+   
+    </div>
+      <h2>OFPPT: </h2>
+      <img src="img/logo1.png"/>
+     
+  </div>
+<div>
+    <form id="f1">
+        <h1>formulaire d'insciption  </h1>
+      
+      
+        <table>
+            <tr>
+                <td id="ident"><label for="">Num :</label></td>
+                <td><input id="a" type="number" required placeholder="Entrer un nombre... "></td>
+            </tr>
+           
+            <tr>
+                <td class="classe1"><label for="">Nom :</label></td>
+                <td><input id="n" type="text" required></td>
+            </tr>
+            <tr>
+                <td class="classe1"><label for="">Prenom :</label></td>
+                <td><input id="pn" type="text" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Date de naissance :</label></td>
+                <td><input id="dn" type="date" required></td>
+            </tr>
+            <tr>
+                
+            <tr><td>Email:</td><td><input type="email" id ="mail"> </td></tr>
+            <tr>
+                <td><label for="">Mot de passe:</label></td>
+                <td><input type="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="">Confirmation:</label></td>
+                <td><input type="password" required></td>
+            </tr>
+            <TR><TD>VILLE:</TD>
+                <td>
+                    <input type="text" list="L1">
+                    <datalist id="L1">
+                        <option> Rabat</option>
+                        <option>Salé</option>
+                        <option>Kénitra</option>
+                    </datalist>
+                </td>
+            </TR>
+            <tr> <td id="tdtop">
+                Adresse
+                </td>
+                <td>
+                    <textarea cols=60 rows=5 ></textarea>
+                </td>
+        </tr>
+            <tr>
+                <td><label>Ville:</label></labe></td>
+                <td>
+                    <select id="ville">
+                       <optgroup label="Maroc">
+                        <option value="Rabat">Rabat</option>
+                        <option value="sale">Salé</option>
+                        <option value="Temara">Temara</option>
+                        <option value="Kénitra" selected>Kénitra</option>
+                      </optgroup>
+                      <optgroup label="Alger">
+                          <option value="Alger">Alger</option>
+                          <option value="wahran">Wahran</option>
+                          <option value="Telmessan">Telmessan</option>
+                      </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Genre :</label></td>
+                <td >
+                    <input type="radio" name="genre" checked><label for="">M</label>
+                    <input type="radio" name="genre"><label for="">F</label>
+                </td>
+            </tr>
+   <tr><td colspan="2">
+        <fieldset>
+            <legend>Centre d'interet : </legend>
+            
+                <input type="checkbox" id="c1"><label for="">sport</label>
+                &nbsp;
+                <input type="checkbox" id="c2"><label for="">Musique</label>
+                &nbsp;
+                <input type="checkbox"id="c3"><label for="">Electronique</label>
+                &nbsp;
+                <input type="checkbox"id="c4"><label for="">Informlatique</label>
+           </fieldset>
+        </td>
+            </tr>  
+        </tr>
+        <tr><td><label >Adresse:</label></td>
+            <td>
+                <textarea id ="adr" cols="49" rows="5"></textarea>
+            </td>
+        </tr>
+           
+     
+        <tr><td colspan="2" align="center">
+<input id="btnV" type="button" 
+ value="Valider" onclick="alert('DEv');" >
+
+        <input type="reset" value="Annuler">
+    </td></tr>
+    </table>
+    </form>
+</div>
+<h1>Formulaire 2  </h1>
+</body>
